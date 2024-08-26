@@ -7,7 +7,7 @@ const getAllFlashcards = (req, res) => {
   db.query(query, (err, results) => {
     if (err) {
       console.error("Error fetching flashcards:", err.message);
-      return res.status(500).json({ error: "Server error" });
+      return res.status(500).json({ error: true, message: "Server error" });
     }
     res.json(results);
   });

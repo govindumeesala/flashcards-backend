@@ -7,7 +7,8 @@ const createFlashcardsTable = () => {
             id INT AUTO_INCREMENT PRIMARY KEY,
             question TEXT NOT NULL,
             answer TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         );
     `;
 
